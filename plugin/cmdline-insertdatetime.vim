@@ -1,9 +1,9 @@
-" cmd-insertdate.vim:
+" cmdline-insertdatetime..vim:
 " Load Once:
-if &cp || exists("g:loaded_cmd_insertdate")
+if &cp || exists("g:loaded_cmdline_insertdatetime")
     finish
 endif
-let g:loaded_cmd_insertdate = 1
+let g:loaded_cmdline_insertdatetime = 1
 let s:keepcpo = &cpo
 set cpo&vim
 " ---------------------------------------------------------------------
