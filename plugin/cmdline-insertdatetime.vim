@@ -16,8 +16,8 @@ function! s:InsertCmdDate(format)
     return l:loc. l:date. l:roc
 endfunction
 
-cmap <C-X>dt <C-\>e<SID>InsertCmdDate('%Y%m%d')<CR>
-cmap <C-X>ts <C-\>e<SID>InsertCmdDate('%Y%m%d%H%M')<CR>
+cnoremap <C-X>dt <C-\>e<SID>InsertCmdDate('%Y%m%d')<CR>
+cnoremap <C-X>ts <C-\>e<SID>InsertCmdDate('%Y%m%d%H%M')<CR>
 
 " ---------------------------------------------------------------------
 let &cpo= s:keepcpo
