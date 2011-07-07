@@ -8,16 +8,8 @@ let s:keepcpo = &cpo
 set cpo&vim
 " ---------------------------------------------------------------------
 
-function! s:InsertCmdDate(format)
-    let l:loc = strpart(getcmdline(), 0, getcmdpos() - 1)
-    let l:roc = strpart(getcmdline(), getcmdpos() - 1)
-    let l:date = strftime(a:format)
-    call setcmdpos(strlen(l:loc) + strlen(l:date) + 1)
-    return l:loc. l:date. l:roc
-endfunction
-
-cnoremap <C-X>dt <C-\>e<SID>InsertCmdDate('%Y%m%d')<CR>
-cnoremap <C-X>ts <C-\>e<SID>InsertCmdDate('%Y%m%d%H%M')<CR>
+cnoremap <expr> <C-X>dt strftime('%Y%m%d')
+cnoremap <expr> <C-X>ts strftime('%Y%m%d%H%M')
 
 " ---------------------------------------------------------------------
 let &cpo= s:keepcpo
